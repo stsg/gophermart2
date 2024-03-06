@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"net/http"
 
+	"github.com/google/uuid"
 	"github.com/stsg/gophermart2/internal/auth"
 	"github.com/stsg/gophermart2/internal/helpers"
 	"github.com/stsg/gophermart2/internal/middlewares"
-	"github.com/stsg/gophermart2/internal/services/gophermart2"
-	"github.com/google/uuid"
+	"github.com/stsg/gophermart2/internal/services/gophermart"
 	"golang.org/x/crypto/bcrypt"
 )
 

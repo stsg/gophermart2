@@ -7,12 +7,12 @@ import (
 	"net/http"
 	"strconv"
 
+	"github.com/jmoiron/sqlx"
 	"github.com/stsg/gophermart2/internal/helpers"
 	"github.com/stsg/gophermart2/internal/luhn"
 	"github.com/stsg/gophermart2/internal/middlewares"
 	"github.com/stsg/gophermart2/internal/models"
-	"github.com/stsg/gophermart2/internal/services/gophermart2"
-	"github.com/jmoiron/sqlx"
+	"github.com/stsg/gophermart2/internal/services/gophermart"
 )
 
 func ProcessOrder(g *gophermart2.Gophermart) http.HandlerFunc {

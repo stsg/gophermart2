@@ -3,11 +3,11 @@ package router
 import (
 	"context"
 
-	"github.com/stsg/gophermart2/internal/handlers"
-	"github.com/stsg/gophermart2/internal/middlewares"
-	"github.com/stsg/gophermart2/internal/services/gophermart2"
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
+	"github.com/stsg/gophermart2/internal/handlers"
+	"github.com/stsg/gophermart2/internal/middlewares"
+	"github.com/stsg/gophermart2/internal/services/gophermart"
 )
 
 func New(ctx context.Context) chi.Router {
