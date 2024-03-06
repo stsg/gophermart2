@@ -10,10 +10,10 @@ import (
 	"github.com/stsg/gophermart2/internal/luhn"
 	"github.com/stsg/gophermart2/internal/middlewares"
 	"github.com/stsg/gophermart2/internal/models"
-	"github.com/stsg/gophermart2/internal/services/gophermart"
+	gophermart "github.com/stsg/gophermart2/internal/services/gophermart"
 )
 
-func Withdraw(g *gophermart2.Gophermart) http.HandlerFunc {
+func Withdraw(g *gophermart.Gophermart) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		user, err := middlewares.GetUserFromCtx(r.Context())
 		if err != nil {

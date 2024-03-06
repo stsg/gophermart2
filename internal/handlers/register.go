@@ -8,11 +8,11 @@ import (
 	"github.com/stsg/gophermart2/internal/auth"
 	"github.com/stsg/gophermart2/internal/helpers"
 	"github.com/stsg/gophermart2/internal/middlewares"
-	"github.com/stsg/gophermart2/internal/services/gophermart"
+	gophermart "github.com/stsg/gophermart2/internal/services/gophermart"
 	"golang.org/x/crypto/bcrypt"
 )
 
-func Register(g *gophermart2.Gophermart) http.HandlerFunc {
+func Register(g *gophermart.Gophermart) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		user, err := middlewares.GetUserFromCtx(r.Context())
 		if err != nil {

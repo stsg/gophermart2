@@ -7,12 +7,12 @@ import (
 	"github.com/go-chi/chi/v5/middleware"
 	"github.com/stsg/gophermart2/internal/handlers"
 	"github.com/stsg/gophermart2/internal/middlewares"
-	"github.com/stsg/gophermart2/internal/services/gophermart"
+	gophermart "github.com/stsg/gophermart2/internal/services/gophermart"
 )
 
 func New(ctx context.Context) chi.Router {
 	r := chi.NewRouter()
-	g := gophermart2.New(ctx)
+	g := gophermart.New(ctx)
 
 	r.Use(
 		middleware.RequestID,
